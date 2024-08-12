@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="botones.css" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Desafio Codificador Alura Latam</title>
+  </head>
+  <body>
+    <header class="navbar">
+      <nav class="search">
+        <div class="logo">
+          <a href="index.html" class="logo">
+            <img src="assets/Logo.png" alt="Logo-alura" />
+          </a>
+        </div>
+        <div class="social">
+          <a
+            href="https://www.linkedin.com/in/kleiver-chapo%C3%B1an-milla-129706176/"
+          >
+            <img class="linkedin" src="assets/linkedin.png" alt="linkedin" />
+          </a>
+          <a href="https://www.instagram.com/kleiver_loops/">
+            <img class="instagram" src="assets/instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://github.com/KleivLps">
+            <img class="github" src="assets/github.png" alt="github" />
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="container-button">
+        <form class="alurainput">
+          <textarea
+            id="texto"
+            class="input1"
+            type="text"
+            placeholder="Ingresa un texto para Encriptar o desencriptar..."
+          ></textarea>
+        </form>
+        <section class="adv-container">
+          <img
+            class="advertencia"
+            src="assets/advertencia.png"
+            alt="advertencia"
+          />
+          <p class="adv-text">Solo letras minusculas y sin acentos. </p>
+        </section>
+
+        <section class="button-container">
+          <button id="codificar" class="boton1">Encriptar!</button>
+          <button id="descodificar" class="boton2">Desencriptar!</button>
+        </section>
+      </div>
+      <section class="des-container">
+        <form id="resultado" class="alurainput2">
+          <img
+            id="muñeco-espera"
+            class="imagen-muñeco"
+            src="./assets/Muñeco.png"
+            alt="muñeco"
+          />
+
+          <p id="texto-espera" class="letra1">Ningun mensaje fue encontrado</p>
+          <p id="texto-espera-2" class="letra2">
+            Ingresa el texto que deseas encriptar o desencriptar.
+          </p>
+        </form>
+      </section>
+    </main>
+    <footer class="pie">
+      <div class="footer-container">
+        <small> &copy; 2024 <b>KleivLps</b> - Derechos Reservados </small>
+      </div>
+    </footer>
+  </body>
+
+  <script src="../script.js"></script>
+</html>

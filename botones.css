@@ -1,0 +1,319 @@
+:root {
+    --border-radius: 2rem;
+   
+    --glow-size: 0.5rem;
+}
+
+.boton1 {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    margin-left: 240px;
+    min-width: 10rem;
+    min-height: 3rem;
+    text-decoration: none;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+    border-radius: var(--border-radius);
+    transition: all 0.5s;
+    gap: 0.5rem;
+    border: 1px solid #0A3871;
+}
+
+.boton2 {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    margin-left: 24px;
+    min-width: 10rem;
+    min-height: 3rem;
+    text-decoration: none;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #0A3871;
+    position: relative;
+    z-index: 0;
+    border-radius: var(--border-radius);
+    transition: all 0.5s;
+    gap: 0.5rem;
+    border: 1px solid #0A3871;
+}
+
+.boton3 {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19.36px;
+    background-color: #0A3871;
+    min-width: 10rem;
+    min-height: 3rem;
+    text-decoration: none;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    z-index: 0;
+    border-radius: var(--border-radius);
+    transition: all 0.5s;
+    gap: 0.5rem;
+    border: 1px solid #0A3871;
+}
+
+.boton1:before, .boton2::before, .boton3::before {
+    content: '';
+    background: linear-gradient(to right,#ca0909 , #1b1bec, #A963F7,
+            #8bff5d, #ffc300, #B881FF, #ca0909 , #1b1bec , #A963F7,
+            #8bff5d, #ffc300, #B881FF);
+    position: absolute;
+    background-size: 300%;
+    z-index: -1;
+    filter: blur(var(--glow-size));
+    width: calc(100% + var(--glow-size));
+    height: calc(100% + var(--glow-size));
+    opacity: 0;
+    border-radius: var(--border-radius);
+    animation: glow 25s alternate infinite;
+    transition: opacity .5s linear;
+    border-color: #0A3871;
+}
+
+.boton1:active, .boton2:active, .boton3:active {
+    background: #0A3871;
+}
+
+.boton1:hover:before, .boton2:hover:before, .boton3:hover:before {
+    opacity: 1;
+}
+
+.boton1:after  {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0A3871;
+    left: 0;
+    top: 0;
+    border-radius: var(--border-radius);
+}
+
+.boton2:after  {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #E9ECF8;
+    left: 0;
+    top: 0;
+    border-radius: var(--border-radius);
+    border-color: #0A3871;
+}
+
+.boton3:after  {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #0A3871;
+    left: 0;
+    top: 0;
+    border-radius: var(--border-radius);
+}
+
+@keyframes glow {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 300% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.boton1,.boton2, .boton3 {
+    width: 328px;
+    height: 67px;
+    
+    padding: 24px;
+    gap: 8px;
+
+}
+
+.button-container{
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+
+    .boton1,.boton2 {
+        width: 250px;
+        height: 67px;
+        
+        padding: 24px;
+        gap: 8px;
+    
+    }
+
+    .boton3{
+
+        width: 624px;
+        height: 67px;
+        margin: 10px;
+        color: #0A3871;
+        border: 1px solid #0A3871;
+    }
+
+    .boton3:after  {
+        background: #E9ECF8;
+       
+    }
+    .boton1, .boton3 {
+        
+        margin-left: 0px;
+        min-width: 10rem;
+        min-height: 3rem;
+    }
+
+    .boton2 {
+        
+        font-size: 16px;
+        line-height: 19.36px;
+        margin-left: 0px;
+        min-width: 10rem;
+        min-height: 3rem;
+       
+    }
+    .button-container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
+
+@media (max-width: 425px) {
+
+    .boton1,.boton2 {
+        width: 343px;
+        height: 67px;
+        
+        padding: 24px;
+        gap: 8px;
+    
+    }
+
+    .boton3{
+
+        width: 343px;
+        height: 67px;
+        margin: 10px;
+        color: #0A3871;
+        border: 1px solid #0A3871;
+    }
+
+    .boton3:after  {
+        background: #E9ECF8;
+       
+    }
+    .boton1, .boton3 {
+        
+        margin-left: 0px;
+        min-width: 10rem;
+        min-height: 3rem;
+        margin: 10px;
+    }
+
+    .boton2 {
+        
+        font-size: 16px;
+        line-height: 19.36px;
+        margin-left: 0px;
+        min-width: 10rem;
+        min-height: 3rem;
+        margin: 10px;
+       
+    }
+    .button-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin:10px;
+    }
+
+
+}
+
+@media (max-width: 380px) {
+
+    .boton1,.boton2 {
+        width: 280px;
+        height: 67px;
+        
+        padding: 24px;
+        gap: 8px;
+    
+    }
+
+    .boton3{
+
+        width: 280px;
+        height: 67px;
+        margin: 10px;
+        color: #0A3871;
+        border: 1px solid #0A3871;
+    }
+
+    .boton3:after  {
+        background: #E9ECF8;
+       
+    }
+    .boton1, .boton3 {
+        
+        margin-left: 0px;
+        min-width: 10rem;
+        min-height: 3rem;
+        margin: 10px;
+    }
+
+    .boton2 {
+        
+        font-size: 16px;
+        line-height: 19.36px;
+        margin-left: 0px;
+        min-width: 10rem;
+        min-height: 3rem;
+        margin: 10px;
+       
+    }
+    .button-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin:10px;
+    }
+
+
+}
